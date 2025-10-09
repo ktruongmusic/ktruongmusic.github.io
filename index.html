@@ -69,28 +69,22 @@ Through my music, I hope to create a space where people can pause, breathe, and 
     View my Knowledge Panel
   </a>
 </p>
-<h2>Official ISNI Certificate</h2>
-<div id="pdf-viewer" style="width:100%; max-width:800px; height:80vh; margin:auto; border:1px solid #ccc;"></div>
 
-<!-- PDF.js Library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.313/pdf.min.js"></script>
-<script>
-  const url = 'files/isni.pdf'; // đường dẫn file PDF
-  pdfjsLib.getDocument(url).promise.then(pdf => {
-    const container = document.getElementById('pdf-viewer');
-    for(let pageNum=1; pageNum <= pdf.numPages; pageNum++){
-      pdf.getPage(pageNum).then(page => {
-        const viewport = page.getViewport({scale:1.5});
-        const canvas = document.createElement('canvas');
-        container.appendChild(canvas);
-        const context = canvas.getContext('2d');
-        canvas.width = viewport.width;
-        canvas.height = viewport.height;
-        page.render({canvasContext:context, viewport:viewport});
-      });
-    }
-  });
-</script>
+<section style="text-align:center; padding:30px; font-family:Arial, sans-serif;">
+  <h2>Official ISNI Certificate</h2>
+  <p style="font-size:18px; color:#444;">
+    ISNI: <b>0000 0005 2865 9891</b><br>
+    <small>Registered ISNI for verified artist identification worldwide</small>
+  </p>
+
+  <a href="files/isni.pdf" target="_blank"
+     style="display:inline-block; margin-top:20px; background:#007BFF; color:white; 
+            padding:12px 24px; border-radius:8px; text-decoration:none; font-weight:bold;">
+    📄 View or Download ISNI Certificate
+  </a>
+</section>
+
+
 
 
 
@@ -169,6 +163,7 @@ Through my music, I hope to create a space where people can pause, breathe, and 
 
 
 </html>
+
 
 
 
